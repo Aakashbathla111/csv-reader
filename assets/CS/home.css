@@ -1,0 +1,41 @@
+body{
+    text-align: center;
+    background: linear-gradient(30deg, yellow, pink, rgb(207, 221, 207), orange, rgb(131, 194, 228));
+}
+input{
+    width:auto
+}
+button{
+    background-color: green;
+    color: white;
+}
+.file-entry {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Adjust as needed for spacing between entries */
+    
+}
+
+.remove-button {
+    background-color: #ff0000; /* Example background color */
+    color: #ffffff; /* Example text color */
+    border: none;
+    margin-left: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #cc0000; /* Example hover background color */
+}
+
+/* Add or modify these styles to center the table */
+#tableContainer {
+    width: 80%; /* Adjust the width as needed */
+}
+
+/* Optionally, you can also center the pagination controls */
+#paginationControls {
+    text-align: center;
+}

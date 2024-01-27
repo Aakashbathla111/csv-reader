@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSV File Viewer</title>
+        <link rel="stylesheet" href="/CS/home.css">
+    </head>
+    
+    <body>
+        <h1>Convert csv file to table form</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="csvFile">
+            <button type="submit">Upload</button>
+        </form>
+    
+        <div id="fileList">
+            <% files.forEach(file => { %>
+                <div class="file-entry">
+                    <div><p class="file-link" data-fileid="<%= file._id %>"><%= file.value %></p></div>
+                    <div><button class="remove-button" data-fileid="<%= file._id %>">Remove</button></div>
+                    
+                </div>
+            <% }); %>
+        </div>
+    
+        <div id="tableContainer"></div>
+        <div id="paginationControls"></div>
+    
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="JS/home.js"></script>
+    </body>
+</html>
